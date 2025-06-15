@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base layer (beige breadboard color) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F5E8C7" />
+        </shape>
+    </item>
+    <!-- Grid of holes (custom drawable) -->
+    <item>
+        <com.example.loginregister.BreadboardHolePatternDrawable
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </item>
+    <!-- Optional border or shadow effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="#4A2C2A" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+</layer-list>
