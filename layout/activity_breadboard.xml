@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#F5F5F5">
+
+    <!-- Control Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp">
+
+        <!-- Gate Selection -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logic Gate:"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:layout_marginBottom="2dp" />
+
+            <Spinner
+                android:id="@+id/gateSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- Input Controls -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inputs:"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:layout_marginBottom="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/inputASwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/inputBSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Mode, Reset and Output Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp">
+
+        <!-- Mode Button -->
+        <Button
+            android:id="@+id/modeButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="Mode: None"
+            android:textSize="11sp"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="0.8"
+            android:text="Reset"
+            android:textSize="11sp"
+            android:background="#FF5722"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Output Display -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="4dp">
+
+            <ImageView
+                android:id="@+id/ledView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/presence_offline"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/outputText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Output: LOW (0)"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Breadboard View - Made Much Bigger -->
+    <com.example.loginregister.BreadboardView
+        android:id="@+id/breadboardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#8B4513"
+        android:elevation="4dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Compact Instructions -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructions: 1. Select gate → 2. Use Mode button → 3. Tap breadboard to place → 4. Toggle inputs to test"
+        android:textSize="10sp"
+        android:textColor="#666666"
+        android:padding="6dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:maxLines="2" />
+
+</LinearLayout>
