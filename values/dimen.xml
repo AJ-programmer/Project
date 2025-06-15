@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Breadboard pin size -->
+    <dimen name="pin_size">24dp</dimen>
+
+    <!-- IC height -->
+    <dimen name="ic_height">48dp</dimen>
+
+    <!-- Additional dimensions for better UI -->
+    <dimen name="pin_margin">2dp</dimen>
+    <dimen name="grid_padding">4dp</dimen>
+    <dimen name="label_text_size">10sp</dimen>
+    <dimen name="row_label_text_size">12sp</dimen>
+    <dimen name="ic_text_size">12sp</dimen>
+    <dimen name="button_padding">8dp</dimen>
+    <dimen name="dialog_padding">16dp</dimen>
+
+    <!-- Wire visual thickness -->
+    <dimen name="wire_thickness">3dp</dimen>
+
+    <!-- LED indicator size -->
+    <dimen name="led_indicator_size">20dp</dimen>
+</resources>

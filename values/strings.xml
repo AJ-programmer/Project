@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoginRegister</string>
+    <string name="breadboard_title">Breadboard Simulator</string>
+    <string name="input_a">Input A</string>
+    <string name="input_b">Input B</string>
+    <string name="led_description">LED Indicator</string>
+    <string name="output_initial">Output: LOW (0)</string>
+    <string-array name="gate_types">
+        <item>AND</item>
+        <item>OR</item>
+        <item>NOT</item>
+        <item>NAND</item>
+        <item>NOR</item>
+    </string-array>
+</resources>
